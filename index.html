@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surya Atha — Portfolio</title>
+  <!-- Google Fonts: Playfair Display (display) + DM Sans (body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <!--  EmailJS — AFTER css, BEFORE script.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    emailjs.init("51cc9945-5129-432b-bfae-5549eeba577b"); // 
+  </script>
+   <script src="script2.js"></script>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION BAR
+       Fixed top nav with logo + links that collapse to hamburger
+  ============================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Logo / Name -->
+      <a href="#hero" class="nav-logo">SA<span class="dot">.</span></a>
+
+      <!-- Desktop nav links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about"   class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger button (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       HERO SECTION
+       Full-screen intro with name, tagline, photo, CTA button
+  ============================================================ -->
+  <section class="hero" id="hero">
+    <!-- Decorative background blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="hero-content">
+      <!-- Text column -->
+      <div class="hero-text reveal">
+        <span class="hero-label">👋 Hello, I'm</span>
+        <h1 class="hero-name">Surya<br /><em>Atha</em></h1>
+        <!-- ✏️ EDIT: Change the tagline below -->
+        <p class="hero-tagline">Full-Stack Developer &amp; Creative Technologist crafting elegant digital experiences.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact"  class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
+
+      <!-- Profile photo column -->
+      <div class="hero-photo surya-atha">
+        <!-- ✏️ EDIT: Replace src with your own photo URL or local path -->
+        <div class="photo-frame">
+          <img
+            src="Profile.jpg"
+            alt="Surya Atha — profile photo"
+            class="profile-img"
+          />
+          <!-- Floating badge -->
+          <div class="badge">
+            <span class="badge-icon">✦</span> Open to Work
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <a href="#about" class="scroll-down" aria-label="Scroll down">
+      <span class="scroll-text">Scroll</span>
+      <span class="scroll-arrow">↓</span>
+    </a>
+  </section>
+
+
+  <!-- ============================================================
+       ABOUT ME SECTION
+  ============================================================ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">01 — About</span>
+        <h2 class="section-title">A Little<br /><em>About Me</em></h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Bio text -->
+        <!-- ✏️ EDIT: Replace all text below with your own bio -->
+        <div class="about-text reveal">
+          <p class="about-lead">
+            I'm a passionate developer with 5+ years of experience building
+            web applications that blend beautiful design with solid engineering.
+          </p>
+          <p>
+            Based in New York, I specialise in React, Node.js, and modern CSS.
+            I love turning complex problems into simple, elegant solutions —
+            and I believe the best products are built at the intersection of
+            design thinking and technical rigour.
+          </p>
+          <p>
+            When I'm not coding, you'll find me hiking, experimenting with film
+            photography, or obsessing over a perfectly brewed cup of coffee.
+          </p>
+
+          <!-- Skills tags -->
+          <div class="skills-tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Figma</span>
+            <span class="tag">Python</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+        </div>
+
+        <!-- Stats cards -->
+        <div class="about-stats reveal reveal-delay">
+          <div class="stat-card">
+            <span class="stat-number">5+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">40+</span>
+            <span class="stat-label">Projects Delivered</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">15+</span>
+            <span class="stat-label">Happy Clients</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">∞</span>
+            <span class="stat-label">Cups of Coffee</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PROJECTS SECTION
+  ============================================================ -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">02 — Work</span>
+        <h2 class="section-title">Featured<br /><em>Projects</em></h2>
+      </div>
+
+      <!-- Project cards grid -->
+      <!-- ✏️ EDIT: Update each card with your real project details -->
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=700&q=70" alt="ShopEase e-commerce app" class="project-img" />
+            <div class="project-overlay">
+              <a href="#" class="overlay-btn" target="_blank" rel="noopener">Live Demo ↗</a>
+              <a href="#" class="overlay-btn overlay-btn-ghost" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-type">E-Commerce</span>
+            <h3 class="project-title">ShopEase</h3>
+            <p class="project-desc">A full-stack online marketplace with real-time inventory, Stripe payments, and a React storefront served by a Node/Express API.</p>
+            <div class="project-stack">
+              <span>React</span><span>Node.js</span><span>MongoDB</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card reveal reveal-delay">
+          <div class="project-img-wrap">
+            <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=700&q=70" alt="AI Chat Dashboard" class="project-img" />
+            <div class="project-overlay">
+              <a href="#" class="overlay-btn" target="_blank" rel="noopener">Live Demo ↗</a>
+              <a href="#" class="overlay-btn overlay-btn-ghost" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-type">AI / SaaS</span>
+            <h3 class="project-title">NeuralChat</h3>
+            <p class="project-desc">An AI-powered conversation dashboard integrating OpenAI's API with a sleek, real-time interface built on Next.js and WebSockets.</p>
+            <div class="project-stack">
+              <span>Next.js</span><span>OpenAI</span><span>WebSockets</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=700&q=70" alt="Analytics Dashboard" class="project-img" />
+            <div class="project-overlay">
+              <a href="#" class="overlay-btn" target="_blank" rel="noopener">Live Demo ↗</a>
+              <a href="#" class="overlay-btn overlay-btn-ghost" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-type">Dashboard</span>
+            <h3 class="project-title">DataLens</h3>
+            <p class="project-desc">A responsive analytics dashboard visualising complex datasets with interactive D3.js charts and CSV/JSON data import support.</p>
+            <div class="project-stack">
+              <span>TypeScript</span><span>D3.js</span><span>PostgreSQL</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card reveal reveal-delay">
+          <div class="project-img-wrap">
+            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=700&q=70" alt="Mobile fitness app" class="project-img" />
+            <div class="project-overlay">
+              <a href="#" class="overlay-btn" target="_blank" rel="noopener">Live Demo ↗</a>
+              <a href="#" class="overlay-btn overlay-btn-ghost" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-type">Mobile App</span>
+            <h3 class="project-title">FitFlow</h3>
+            <p class="project-desc">A cross-platform fitness tracking app built with React Native, featuring personalised workout plans and health metric visualisations.</p>
+            <div class="project-stack">
+              <span>React Native</span><span>Firebase</span><span>Expo</span>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /.projects-grid -->
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       GALLERY SECTION
+  ============================================================ -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">03 — Snapshots</span>
+        <h2 class="section-title">My<br /><em>Gallery</em></h2>
+      </div>
+
+      <!-- Masonry-style photo grid -->
+      <!-- ✏️ EDIT: Replace src values with your own photo URLs -->
+      <div class="gallery-grid reveal">
+        <div class="gallery-item tall">
+          <img src="Puri.png" alt="Puri Sun Temple" />
+          <div class="gallery-caption">Puri Sun Temple</div>
+        </div>
+        <div class="gallery-item">
+          <img src="Group St.jpg" alt="Tech workspace" />
+          <div class="gallery-caption">My Workspace</div>
+        </div>
+        <div class="gallery-item">
+          <img src="Sea stand.jpg" alt="Tech workspace" />
+          <div class="gallery-caption">My Workspace</div>
+        </div>
+        <div class="gallery-item">
+          <img src="Boys Gp.jpg" alt="Coastal sunset" />
+          <div class="gallery-caption">Pacific Sunset</div>
+        </div>
+        <div class="gallery-item">
+          <img src="sun.jpg" alt="Valley view" />
+          <div class="gallery-caption">Valley Views</div>
+        </div>
+        <div class="gallery-item wide">
+          <img src="sea.jpg" alt="Digha" />
+          <div class="gallery-caption">Digha</div>
+        </div>
+        <div class="gallery-item">
+          <img src="With ph.png" alt="Forest path" />
+          <div class="gallery-caption">Forest Trails</div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SOCIAL MEDIA SECTION
+  ============================================================ -->
+  <section class="social section" id="social">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">04 — Connect</span>
+        <h2 class="section-title">Find Me<br /><em>Online</em></h2>
+      </div>
+
+      <!-- ✏️ EDIT: Replace # with your real social media profile URLs -->
+      <div class="social-grid reveal">
+
+        <a href="https://www.instagram.com/i.suryaatha/" target="_blank" rel="noopener" class="social-card insta" aria-label="Instagram">
+          <div class="social-icon"><i class="fa-brands fa-instagram"></i></div>
+          <div class="social-info">
+            <span class="social-name">Instagram</span>
+            <span class="social-handle">@i.suryaatha</span>
+          </div>
+          <span class="social-arrow">↗</span>
+        </a>
+
+        <a href="https://www.facebook.com/surya.atha.1" target="_blank" rel="noopener" class="social-card fb" aria-label="Facebook">
+          <div class="social-icon"><i class="fa-brands fa-facebook-f"></i></div>
+          <div class="social-info">
+            <span class="social-name">Facebook</span>
+            <span class="social-handle">Surya Atha</span>
+          </div>
+          <span class="social-arrow">↗</span>
+        </a>
+
+        <a href="https://x.com/surya_atha" target="_blank" rel="noopener" class="social-card tw" aria-label="Twitter / X">
+          <div class="social-icon"><i class="fa-brands fa-x-twitter"></i></div>
+          <div class="social-info">
+            <span class="social-name">Twitter (X)</span>
+            <span class="social-handle">@surya_atha</span>
+          </div>
+          <span class="social-arrow">↗</span>
+        </a>
+
+        <!-- ✏️ EDIT: Replace href with mailto:your@email.com -->
+        <a href="mailto:suryaatha@hotmail.com" class="social-card email" aria-label="Email">
+          <div class="social-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="social-info">
+            <span class="social-name">Email</span>
+            <span class="social-handle">suryaatha@hotmail.com</span>
+          </div>
+          <span class="social-arrow">↗</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONTACT SECTION
+  ============================================================ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">05 — Say Hello</span>
+        <h2 class="section-title">Get In<br /><em>Touch</em></h2>
+      </div>
+
+      <div class="contact-wrapper reveal">
+        <!-- Left info panel -->
+        <div class="contact-info">
+          <p class="contact-intro">
+            Have a project in mind or just want to say hi? My inbox is always open —
+            I'll do my best to get back to you within 24 hours.
+          </p>
+          <ul class="contact-details">
+            <!-- ✏️ EDIT: Update location and email -->
+            <li><i class="fa-solid fa-location-dot"></i> Malatore, Baliara, Bankura, West Benagal, India</li>
+            <li><i class="fa-solid fa-envelope"></i> suryaatha@hotmail.com</li>
+            <li><i class="fa-solid fa-clock"></i> Mon – Fri, 10am – 6pm EST</li>
+          </ul>
+        </div>
+
+        <!-- Contact form (frontend only — no backend) -->
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="Surya Atha" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="example@gamil.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project enquiry…" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+            <span>Send Message</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+          <!-- Success / error feedback (shown via JS) -->
+          <div class="form-feedback" id="formFeedback" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">SA<span class="dot">.</span></span>
+      <!-- ✏️ EDIT: Update name and year if needed -->
+      <p class="footer-copy">© 2026 Surya Atha. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/i.suryaatha/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://x.com/"         target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="mailto:suryaatha@hotmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back-to-top button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
